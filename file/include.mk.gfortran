@@ -1,0 +1,24 @@
+MAKE=/usr/bin/make
+
+# NETCDF libraries
+
+
+NETCDF=/opt/netcdf-4.0.1/
+
+NETCDF_INC=-I$(NETCDF)/include 
+NETCDF_LIBS=-L$(NETCDF)/lib -lnetcdf
+
+# HDF libraries
+
+# TODO - instalar serial
+# HDF5=/scratchin/grupos/catt-brams/shared/libs/gfortran/hdf5-1.8.12-serial
+# HDF5_INC=-I$(HDF5)/include
+$ HDF5_LIB=-L$(HDF5)/lib -lhdf5hl_fortran -lhdf5_fortran -lhdf5_hl -lhdf5 -L/scratchin/grupos/catt-brams/shared/libs/gfortran/zlib-1.2.8/lib -lz -ldl
+
+
+F_COMP=gfortran
+LOADER=gfortran
+MOD_EXT=mod
+
+F_OPTS= -O0 
+LOADER_OPTS= -O0
